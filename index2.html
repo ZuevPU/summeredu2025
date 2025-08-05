@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Летний ПедСовет — пространство смыслов, технологий и творчества</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Ваш минифицированный CSS (если нужен) -->
+    <link href="css/output.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="css/all.min.css" rel="stylesheet" />
+
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Mini-inline style -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+        body {
+            font-family: "Roboto", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+        }
+
+        .gallery-item:hover,
+        .stats-item:hover {
+            transform: scale(1.05);
+        }
+
+        .toc-item {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .toc-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .7rem;
+            height: .5rem;
+            width: .5rem;
+            background: #4f46e5;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .toc-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            /* px-4 py-2 */
+            border-radius: 9999px;
+            /* rounded-full */
+            background: #eef2ff;
+            /* bg-indigo-100 */
+            color: #4338ca;
+            /* text-indigo-700 */
+            font-size: 0.875rem;
+            /* text-sm */
+            font-weight: 500;
+            /* font-medium */
+            transition: background-color .2s, color .2s;
+            /* transition-colors */
+        }
+
+        .toc-btn:hover {
+            background: #e0e7ff;
+            /* hover:bg-indigo-200 */
+            color: #3730a3;
+            /* hover:text-indigo-800 */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Hero -->
+    <header class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-12 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="Ресурс 1.svg" alt="Логотип Машук" class="mb-6 h-16">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Летний ПедСовет — пространство педагогических смыслов, технологий и творчества
+                    </h1>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i><span>26–29 июля 2025</span>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i><span>Пятигорск, Ставропольский край</span>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                            <i class="fas fa-users mr-2"></i><span>180 очно / 2 500 онлайн</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="title.jpg" alt="Фото ПедСовета" class="rounded-lg shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- TOC -->
+    <section id="table-of-contents" class="bg-white py-8 sticky top-0 z-10 shadow-sm">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-5 text-center">Содержание</h2>
+
+            <!-- кнопки-чипы -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#description" class="toc-btn">Описание</a>
+                <a href="#topics" class="toc-btn">Ключевые темы</a>
+                <a href="#speakers" class="toc-btn">Спикеры</a>
+                <a href="#practices" class="toc-btn">Практики участников</a>
+                <a href="#moderators" class="toc-btn">Мастер-классы модераторов</a>
+                <a href="#winners" class="toc-btn">Работы-победители</a>
+                <a href="#winners2" class="toc-btn">Работы участников</a>
+                <a href="#bank" class="toc-btn">Банк практик</a>
+                <a href="#resources" class="toc-btn">Фотогалерея</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section id="description" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">О мероприятии</h2>
+
+            <div class="bg-white rounded-xl shadow-md p-8 mb-12">
+                <p class="mb-6 text-lg">
+                    «Летний ПедСовет» — образовательная программа для педагогов, наставников и студентов педагогических
+                    направлений.
+                    В центре внимания: искусственный интеллект, творчество, кино, критическое мышление и наставничество.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-indigo-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-indigo-700">Цель</h4>
+                        <p>Показать современные инструменты педагогики и вдохновить на их применение в школе и
+                            дополнительном образовании.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-green-700">Задачи</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Раскрыть практические возможности ИИ для учителя.</li>
+                            <li>Соединить технологии и творчество в образовательном процессе.</li>
+                            <li>Прокачать критическое мышление школьников и педагогов.</li>
+                            <li>Укрепить наставническую традицию и профессиональное сообщество.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Итоговый ролик -->
+    <section id="promo-video" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-lg">
+                <!-- Локальный файл. Путь скорректируйте при необходимости -->
+                <video class="absolute top-0 left-0 w-full h-full" controls preload="metadata"
+                    poster="video-poster.jpg">
+                    <source src="1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает встроенные видео.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Topics -->
+    <section id="topics" class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Ключевые темы</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">ИИ в педагогике</h3>
+                    <p class="text-gray-600">Как технологии дополняют учителя и расширяют возможности школы.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-scale-balanced text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Этика и возможности ИИ</h3>
+                    <p class="text-gray-600">Ответственное применение алгоритмов и защита детства в цифровой среде.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-film text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Кино и творчество</h3>
+                    <p class="text-gray-600">Интеграция короткометражек, мультфильмов и проектов в учебный процесс.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Критическое мышление</h3>
+                    <p class="text-gray-600">Инструменты анализа информации и развития самостоятельности учеников.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-friends text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Наставничество</h3>
+                    <p class="text-gray-600">Передача опыта, поддержка и формирование профессионального сообщества.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Практические мастер-классы</h3>
+                    <p class="text-gray-600">Промт-инструктажи, учебные пособия, групповые задания.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPEAKERS (динамический) =================================== -->
+    <section id="speakers" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Выступления спикеров</h2>
+            <p class="text-xl text-center mb-12 max-w-3xl mx-auto">
+                Эксперты «Летнего ПедСовета»
+            </p>
+            <div id="speakersContainer" class="grid md:grid-cols-2 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- ===== PRACTICES ================================================== -->
+    <section id="practices" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Практики участников</h2>
+            <div id="practicesContainer" class="grid md:grid-cols-2 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- ===== MODERATOR MASTERCLASSES ==================================== -->
+    <section id="moderators" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Мастер-классы модераторов</h2>
+            <div id="modsContainer" class="grid md:grid-cols-2 gap-8"></div>
+        </div>
+    </section>
+    <!-- ===== WINNERS ================================================= -->
+    <section id="winners" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Работы-победителей кинопедагогический фестиваль «Учитель.
+                Кино. Машук» </h2>
+            <div id="winnersGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+    <!-- ===== WINNERS (участники программы) ============================= -->
+    <section id="winners2" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                Работы-участников программы «Летний ПедСовет. Кино. Машук»
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Анимация -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-film text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Анимация</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        Короткие мультфильмы, созданные участниками с помощью нейросетей и классической перекладки: от
+                        раскадровки до озвучки.
+                    </p>
+                    <a href="https://disk.yandex.ru/d/i_ChpxLlG_3CdQ/Анимация" target="_blank"
+                        class="inline-block self-start bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full transition-colors">
+                        Смотреть работы
+                    </a>
+                </div>
+
+                <!-- 2. Видеорепортажи -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-video text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Видеорепортажи</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        Документальные зарисовки о школьной жизни, проектных сменах и героях образования. Снято и
+                        смонтировано за время ПедСовета.
+                    </p>
+                    <a href="https://disk.yandex.ru/d/i_ChpxLlG_3CdQ/Видеорепортаж" target="_blank"
+                        class="inline-block self-start bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full transition-colors">
+                        Смотреть работы
+                    </a>
+                </div>
+
+                <!-- 3. Художественные ролики -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-red-100 text-red-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-clapperboard text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Художественные ролики</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        Игровые мини-фильмы на темы воспитания, ценностей и возможностей ИИ. Жанры: драма, комедия,
+                        соц-реклама.
+                    </p>
+                    <a href="https://disk.yandex.ru/d/i_ChpxLlG_3CdQ/Художественные%20ролики" target="_blank"
+                        class="inline-block self-start bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full transition-colors">
+                        Смотреть работы
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== BANK OF PRACTICES ========================================= -->
+    <section id="bank" class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Банк практик</h2>
+            <div id="bankContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Resources / Фотогалерея -->
+    <section id="resources" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center">Фотогалерея</h2>
+
+            <!-- 8 превью (2 × 4) -->
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <!-- 1 -->
+                <a href="gallery/2025-07-26_15-31-20_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-31-20_LM.jpg" class="w-full h-48 object-cover" alt="Фото 1">
+                    </div>
+                </a>
+
+                <!-- 2 -->
+                <a href="gallery/2025-07-26_15-42-13_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-42-13_LM.jpg" class="w-full h-48 object-cover" alt="Фото 2">
+                    </div>
+                </a>
+
+                <!-- 3 -->
+                <a href="gallery/2025-07-26_15-44-09_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-44-09_LM.jpg" class="w-full h-48 object-cover" alt="Фото 3">
+                    </div>
+                </a>
+
+                <!-- 4 -->
+                <a href="gallery/2025-07-26_15-44-15_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-44-15_LM.jpg" class="w-full h-48 object-cover" alt="Фото 4">
+                    </div>
+                </a>
+
+                <!-- 5 -->
+                <a href="gallery/2025-07-26_15-44-19_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-44-19_LM.jpg" class="w-full h-48 object-cover" alt="Фото 5">
+                    </div>
+                </a>
+
+                <!-- 6 -->
+                <a href="gallery/2025-07-26_15-45-32_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-45-32_LM.jpg" class="w-full h-48 object-cover" alt="Фото 6">
+                    </div>
+                </a>
+
+                <!-- 7 -->
+                <a href="gallery/2025-07-26_15-45-59_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-45-59_LM.jpg" class="w-full h-48 object-cover" alt="Фото 7">
+                    </div>
+                </a>
+
+                <!-- 8 -->
+                <a href="gallery/2025-07-26_15-46-24_LM.jpg" class="glightbox-photo group" data-gallery="photo">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg">
+                        <img src="gallery/2025-07-26_15-46-24_LM.jpg" class="w-full h-48 object-cover" alt="Фото 8">
+                    </div>
+                </a>
+
+            </div>
+
+
+            <!-- Кнопка «Смотреть больше» -->
+            <div class="mt-10 text-center">
+                <a href="https://disk.yandex.ru/d/0f5H3v4l71B19Q"
+                    class="inline-block bg-indigo-600 hover:bg-indigo-700 transition-colors text-white px-6 py-3 rounded-full font-medium">
+                    Смотреть больше
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="Ресурс 1.svg" alt="Логотип Машук" class="h-12 mb-4">
+                    <p class="text-gray-400">© 2025 Центр знаний «Машук». Все права защищены.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://vk.com/czmashuk" class="text-gray-400 hover:text-white"><i
+                            class="fab fa-vk text-2xl"></i></a>
+                    <a href="https://t.me/czmashuk" class="text-gray-400 hover:text-white"><i
+                            class="fab fa-telegram text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SCRIPTS =============================== -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- данные -->
+    <script src="speakers.js"></script>
+    <script src="participants.js"></script>
+    <script src="moderators.js"></script>
+    <script src="winners.js"></script>
+    <script src="bank.js"></script>
+
+    <script>
+        /* === UI-мелочи === */
+        const topBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => topBtn.classList.toggle('opacity-100', window.pageYOffset > 300));
+        topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelectorAll('a[href^="#"]').forEach(link =>
+            link.addEventListener('click', e => { e.preventDefault(); document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); })
+        );
+
+        /* === универсальный шаблон карточки === */
+        function makeCard(o) {
+            return `
+  <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden p-6 speaker-card transition-transform">
+    <div class="flex items-start mb-4">
+      <img src="${o.photo}" alt="${o.name}"
+           class="rounded-full w-16 h-16 mr-4 border-2 border-indigo-200">
+      <div>
+        <h3 class="text-xl font-bold">${o.name}</h3>
+        <p class="text-gray-600 text-sm">${o.position}</p>
+      </div>
+    </div>
+    <div class="mb-4">
+      <span class="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium mb-2">${o.tag}</span>
+      <h4 class="text-lg font-semibold">${o.topic}</h4>
+    </div>
+    ${o.bullets?.length ? `<ul class="list-disc pl-5 space-y-2 mb-4">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>` : ''}
+    ${o.quote ? `<p class="italic mb-4">«${o.quote}»</p>` : ''}
+    <div class="flex space-x-3">
+      ${o.ppt ? `<a href="${o.ppt}"  class="text-indigo-600 hover:text-indigo-800 flex items-center"><i class="far fa-file-powerpoint mr-1"></i>Презентация</a>` : ''}
+      ${o.notes ? `<a href="${o.notes}" class="text-indigo-600 hover:text-indigo-800 flex items-center"><i class="far fa-file-alt mr-1"></i>Конспект</a>` : ''}
+    </div>
+  </div>`;
+        }
+
+        /* === вывод данных === */
+        document.getElementById('speakersContainer').innerHTML = speakers.map(makeCard).join('');
+        document.getElementById('practicesContainer').innerHTML = practices.map(makeCard).join('');
+        document.getElementById('modsContainer').innerHTML = masterclasses.map(makeCard).join('');
+
+        /* победители (видео) */
+        document.getElementById('winnersGrid').innerHTML = winners.map(w => `
+  <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+    <h3 class="text-xl font-semibold mb-2">${w.nomination}</h3>
+    <p class="mb-2 font-medium">${w.work}</p>
+    <p class="mb-4">${w.name}<br><span class="text-sm text-gray-600">${w.position}</span></p>
+    <a href="${w.video}" class="glightbox-v text-indigo-600 hover:text-indigo-800 flex items-center"
+       data-type="video" ${w.poster ? `data-poster="${w.poster}"` : ''}>
+      <i class="far fa-play-circle mr-1"></i> Смотреть работу
+    </a>
+  </div>
+`).join('');
+
+        /* банк практик → карточки */
+        const bankC = document.getElementById('bankContainer');
+        bank.forEach(it => bankC.insertAdjacentHTML('beforeend', `
+  <div class="bg-white shadow-md rounded-lg p-5 hover:shadow-xl transition flex flex-col">
+    <h3 class="text-lg font-semibold mb-2">${it.title}</h3>
+    <p class="text-sm text-gray-700 mb-1">${it.author}</p>
+    ${it.position ? `<p class="text-sm text-gray-500 mb-3">${it.position}</p>` : ''}
+    <a href="${it.link}" target="_blank" class="mt-auto text-indigo-600 hover:text-indigo-800 font-medium">Смотреть</a>
+  </div>`));
+
+        /* === GLightbox === */
+        GLightbox({ selector: '.gallery-item' }); // фото
+        GLightbox({ selector: '.glightbox-v' });  // видео
+    </script>
+</body>
+
+</html>
