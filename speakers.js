@@ -29,7 +29,7 @@ const speakers = [
         "Роль педагога в цифровом мире"
       ],
       quote: "Технологии без этики — тупиковая ветвь эволюции",
-      ppt:  "",
+      ppt:  "https://disk.yandex.ru/d/rkvZJOa6yvslgg",
       notes:""
     },
     {
@@ -59,7 +59,7 @@ const speakers = [
         "Безопасность и мотивация школьников"
       ],
       quote: "Ребёнок понимает технологию, когда может объяснить её другу",
-      ppt:  "",
+      ppt:  "https://disk.yandex.ru/d/1ZzQe6AO7Iyf5Q",
       notes:""
     },
     {
@@ -74,7 +74,7 @@ const speakers = [
         "Ошибки и лайфхаки работы с LLM"
       ],
       quote: "Чем чище вопрос — тем умнее ответ",
-      ppt:  "",
+      ppt:  "https://disk.yandex.ru/i/M_O6AGs41UIDrQ",
       notes:""
     },
     {
@@ -89,8 +89,8 @@ const speakers = [
         "Цифровые инструменты вовлечения"
       ],
       quote: "Если горят глаза учителя, загорятся и у учеников",
-      ppt:  "",
-      notes:""
+      ppt:  "https://disk.yandex.ru/i/N7FCqElJtqFRbA",
+      notes:"https://t.me/mashukevent_bot/motiv"
     },
     {
       photo: "8.jpg",
@@ -104,7 +104,7 @@ const speakers = [
         "Умение менять точку зрения"
       ],
       quote: "Сомнение — первый шаг к знанию",
-      ppt:  "",
+      ppt:  "https://disk.yandex.ru/d/SC5frHf_JOw0cg",
       notes:""
     },
     {
@@ -119,7 +119,7 @@ const speakers = [
         "Кейсы и результаты пилотных уроков"
       ],
       quote: "Главное — начать и не бояться задавать ИИ вопросы",
-      ppt:  "",
+      ppt:  "https://disk.yandex.ru/d/UbU3Ka_JRZTWeQ",
       notes:""
     }
   ];
