@@ -84,7 +84,7 @@ const practices = [
         "Семантические карты текста",
         "Геймификация анализа литературы"
       ],
-      ppt:  "files/lisitsyna.pptx",
+      ppt:  "https://disk.yandex.ru/d/0bIykWfTgcxm9g",
     },
   
     {
